@@ -5,6 +5,8 @@ fire, debris, and similar clips without opening every heavy source file in a
 video player. Sibling project to [SamplesUI](https://github.com/LostMyCoconuts/SamplesUI),
 same idea applied to video instead of audio.
 
+![ElementsUI preview](docs/preview.jpg)
+
 ### "Wow, Coconuts this is awesome"
 Is it? Glad you think so.
 Feel free to use it, don't sue me if something goes wrong.
