@@ -3,6 +3,7 @@
 // format files, which are never served over HTTP).
 const PREVIEW_VIDEO_MIME: Record<string, string> = {
   ".mp4": "video/mp4",
+  ".webm": "video/webm",
 };
 
 const PREVIEW_IMAGE_MIME: Record<string, string> = {
