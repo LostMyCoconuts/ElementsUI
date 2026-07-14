@@ -87,7 +87,7 @@ export default function Sidebar({
     <div className="w-72 shrink-0 border-r border-border bg-bg-panel/60 flex flex-col h-full">
       <div className="px-4 py-3 border-b border-border">
         <div className="text-xs font-bold tracking-[0.15em] text-accent-blue-light uppercase">
-          ElementsUI
+          Elements
         </div>
       </div>
 
