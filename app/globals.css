@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #08090b;
+  --bg-panel: #101216;
+  --bg-panel-raised: #16191f;
+  --border: #22262e;
+  --text: #e8eaed;
+  --text-dim: #8b919c;
+  --text-faint: #565c66;
+  --accent-blue: #2563eb;
+  --accent-blue-light: #38bdf8;
+  --accent-green: #22c55e;
+  --accent-green-light: #86efac;
+  --accent-amber: #f5a524;
+  --danger: #ef4444;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-panel: var(--bg-panel);
+  --color-bg-panel-raised: var(--bg-panel-raised);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-text-dim: var(--text-dim);
+  --color-text-faint: var(--text-faint);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-blue-light: var(--accent-blue-light);
+  --color-accent-green: var(--accent-green);
+  --color-accent-green-light: var(--accent-green-light);
+  --color-accent-amber: var(--accent-amber);
+  --color-danger: var(--danger);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(37, 99, 235, 0.08), transparent),
+    radial-gradient(ellipse 700px 500px at 100% 10%, rgba(34, 197, 94, 0.05), transparent),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* faint dot-grid texture, matches the Flow-style reference aesthetic */
+.dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faint);
+}
+
+.gradient-card-blue {
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-blue-light) 100%);
+}
+.gradient-card-green {
+  background: linear-gradient(135deg, #16a34a 0%, var(--accent-green-light) 100%);
+}
