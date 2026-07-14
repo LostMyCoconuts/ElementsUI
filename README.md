@@ -50,3 +50,21 @@ name becomes the element's "Pack". Elements with no matching preview files
 still show up, just with no thumbnail/playback. Source format files are never
 served over HTTP (they can be multi-GB); use "Reveal in Explorer" to grab the
 real file.
+
+Two other preview conventions are also recognized, since not every library is
+tagged consistently:
+
+- **`.webm` as a bare preview clip.** A file like `Lingering_Fog_1_1175_2K.webm`
+  is treated as the preview video for the `Lingering_Fog_1_1175` element (its
+  resolution tag is dropped when matching) — `.webm` is never treated as a
+  source format. An explicitly named `<base>_preview.mp4` still wins over a
+  bare `.webm` if both exist.
+- **`medium__<seq>_<assetId>.<ext>` stills matched by asset ID.** Some
+  libraries name the preview still after the asset ID embedded in the
+  source's own filename rather than the full base name — e.g.
+  `medium__0042_1175.jpg` pairs with `Lingering_Fog_1_1175_*` because `1175`
+  is the trailing numeric segment of that element's base name. The `0042` is
+  an unrelated sequence number and is ignored. Matching is scoped per
+  collection folder so asset IDs from different packs can't collide. An
+  explicitly named `<base>_preview.jpg` still wins over a `medium__` match if
+  both exist.
